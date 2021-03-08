@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400;600;700&display=swap');
+
+:root {
+  --background: #282A36;
+  --comment: #6272A4;
+  --selection: #44475A;
+  --foreground: #F8F8F2;
+  --cyan: #8BE9FD;
+  --green: #50FA7B;
+  --orange: #FFB86C;
+  --pink: #FF79C6;
+  --purple: #BD93F9;
+  --red: #FF5555;
+  --yellow: #F1FA8C;
+  --other-color: #21222c;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--background);
+  color: var(--foreground);
+}
+
+header {
+  padding: 32px;
+  width: 100%;
+  background: var(--other-color);
+  text-align: center;
+}
+
+header nav {
+  font-size: 22px;
+}
+
+header nav a {
+  color: var(--foreground);
+  position: relative;
+}
+
+header nav a + a {
+  margin-left: 32px;
+}
+
+header nav a.active {
+  font-weight: bold;
+  color: var(--cyan);
+}
+header nav a::after {
+  content: "";
+  width: 0;
+  height: 1px;
+  position: absolute;
+  background: var(--cyan);
+  bottom: -4px;
+  left: 0;
+}
+
+header nav a:hover::after {
+  width: 100%;
+  transition: width 200ms ease-in-out 0s;
+}
+
+/* CARD */
+.card {
+  background: var(--other-color);
+  width: 800px;
+  min-height: 400px;
+
+  margin: 45px auto;
+
+  display: grid;
+  grid-template-columns: 40% 60%;
+
+  box-shadow: 0px 2px 6px -2px rgba(0, 0, 0, 0.4);
+
+  animation-name: right;
+  animation-duration: 700ms;
+  animation-timing-function: ease-out;
+}
+
+@keyframes right {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  } to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+section.image {
+  background: url("https://source.unsplash.com/collection/41504743/500x500") no-repeat center center / cover;
+}
+
+section.details {
+  padding: 32px;
+}
+
+.details h3 {
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--purple);
+  font-weight: bold;
+}
+
+.details .item {
+  padding: 16px 0;
+  border-top: 1px solid var(--purple);
+}
+.details h3,
+.details .item div:nth-child(1) {
+  font-size: 14px;
+  line-height: 24px;
+  opacity: 0.7;
+  letter-spacing: 0.7px;
+  font-weight: normal;
+}
+
+.details .item div:nth-child(2) {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.details .item span {
+  padding: 8px 16px;
+  background: var(--cyan);
+  border-radius: 16px;
+  color: var(--other-color);
+  margin-left: 4px;
+  margin-top: 8px;
+  display: inline-block;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.details .item:nth-child(2) {
+  border: none;
+}
