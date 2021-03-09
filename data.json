@@ -1,0 +1,24 @@
+{
+  "teachers": [
+    {
+      "id": 1,
+      "avatar_url": "https://pbs.twimg.com/profile_images/998711933241978880/5VdsOA1G_400x400.jpg",
+      "name": "Gustavo",
+      "birth": 873590400000,
+      "education_level": "high_school",
+      "type_class": "remotely",
+      "classes": "Matemática, Física",
+      "created_at": 1615252956727
+    },
+    {
+      "id": 2,
+      "avatar_url": "https://pbs.twimg.com/profile_images/998711933241978880/5VdsOA1G_400x400.jpg",
+      "name": "João",
+      "birth": 873072000000,
+      "education_level": "undergraduete",
+      "type_class": "presential",
+      "classes": "Matemática, Física",
+      "created_at": 1615252978762
+    }
+  ]
+}

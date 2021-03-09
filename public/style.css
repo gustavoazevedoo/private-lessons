@@ -133,7 +133,7 @@ section.details {
 
 .details .item span {
   padding: 8px 16px;
-  background: var(--cyan);
+  background: var(--purple);
   border-radius: 16px;
   color: var(--other-color);
   margin-left: 4px;
@@ -145,4 +145,37 @@ section.details {
 
 .details .item:nth-child(2) {
   border: none;
+}
+
+/* FORM */
+form input,
+form select,
+form button {
+  width: 100%;
+  border-radius: 4px;
+  padding: 8px;
+  font-size: 18px;
+  background: var(--selection);
+  color: var(--foreground);
+  border: none;
+}
+
+form ::placeholder {
+  font-size: 16px;
+  color: var(--foreground);
+  opacity: 0.5;
+}
+
+form input[type="date"],
+form input[type="radio"],
+form select {
+  width: initial
+}
+
+form button {
+  padding: 16px 32px;
+  margin-top: 32px;
+  color: var(--background);
+  background: var(--green);
+  font-weight: bold;
 }
