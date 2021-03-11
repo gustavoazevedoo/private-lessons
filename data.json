@@ -19,6 +19,16 @@
       "type_class": "presential",
       "classes": "Matemática, Física",
       "created_at": 1615252978762
+    },
+    {
+      "id": 3,
+      "avatar_url": "https://pbs.twimg.com/profile_images/998711933241978880/5VdsOA1G_400x400.jpg",
+      "name": "Adriana Pereira",
+      "birth": -112060800000,
+      "education_level": "undergraduete",
+      "type_class": "presential",
+      "classes": "Psicologia, Reiki, teste",
+      "created_at": 1615418998145
     }
   ]
 }

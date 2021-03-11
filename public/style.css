@@ -98,10 +98,6 @@ header nav a:hover::after {
   }
 }
 
-section.image {
-  background: url("https://source.unsplash.com/collection/41504743/500x500") no-repeat center center / cover;
-}
-
 section.details {
   padding: 32px;
 }
@@ -150,7 +146,8 @@ section.details {
 /* FORM */
 form input,
 form select,
-form button {
+form button,
+a.button {
   width: 100%;
   border-radius: 4px;
   padding: 8px;
@@ -178,4 +175,17 @@ form button {
   color: var(--background);
   background: var(--green);
   font-weight: bold;
+}
+
+a.button {
+  display: block;
+  padding: 16px 32px;
+  margin-top: 32px;
+  text-align: center;
+  font-weight: bold;
+  opacity: 1;
+  transition: 200ms;
+}
+a.button:hover {
+  opacity: 0.7;
 }
