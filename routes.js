@@ -22,6 +22,10 @@ routes.get("/students", (req, res) => {
   return res.send("students")
 })
 
+routes.put("/teachers", teachers.update)
+
+routes.delete("/teachers", teachers.delete)
+
 routes.post("/teachers", teachers.post)
 
 

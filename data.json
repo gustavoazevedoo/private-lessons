@@ -3,18 +3,18 @@
     {
       "id": 1,
       "avatar_url": "https://pbs.twimg.com/profile_images/998711933241978880/5VdsOA1G_400x400.jpg",
-      "name": "Gustavo",
-      "birth": 873590400000,
-      "education_level": "high_school",
-      "type_class": "remotely",
-      "classes": "Matemática, Física",
+      "name": "Gustavo Azevedo",
+      "birth": "1997-09-07",
+      "education_level": "master_degree",
+      "type_class": "presential",
+      "classes": "Matemática, Física, outra",
       "created_at": 1615252956727
     },
     {
       "id": 2,
       "avatar_url": "https://pbs.twimg.com/profile_images/998711933241978880/5VdsOA1G_400x400.jpg",
       "name": "João",
-      "birth": 873072000000,
+      "birth": "1993-09-07",
       "education_level": "undergraduete",
       "type_class": "presential",
       "classes": "Matemática, Física",
@@ -49,6 +49,16 @@
       "type_class": "presential",
       "classes": "Elétrica, Mjölnir",
       "created_at": 1615502751621
+    },
+    {
+      "id": 6,
+      "avatar_url": "https://pbs.twimg.com/profile_images/998711933241978880/5VdsOA1G_400x400.jpg",
+      "name": "Gustavo Azevedo",
+      "birth": 874368000000,
+      "education_level": "doctorate",
+      "type_class": "presential",
+      "classes": "Matemática, Física, outra",
+      "created_at": 1615673780643
     }
   ]
 }
