@@ -32,7 +32,6 @@ exports.post = (req, res) => {
 
     return res.redirect("/teachers")
   })
-
 }
 
 exports.show = (req, res) => {
@@ -80,6 +79,7 @@ exports.update = (req, res) => {
       return true
     }
   })
+
   if (!foundTeacher) return res.send("Teacher not found!")
 
   const teacher = {
@@ -87,12 +87,30 @@ exports.update = (req, res) => {
     ...req.body,
     id: Number(req.body.id)
   }
-console.log(teacher)
+
   data.teachers[index] = teacher
 
   fs.writeFile("data.json", JSON.stringify(data, null, 2), (err) => {
     if (err) return res.send("Update error!")
 
     return res.redirect(`/teachers/${id}`)
+  })
+}
+
+exports.delete = (req, res) => {
+  const { id } = req.body
+
+  const filteredTeacher = data.teachers.filter((teacher) => {
+    return teacher.id != id
+  })
+
+  if(!filteredTeacher) return res.send("Teacher not found")
+
+  data.teachers = filteredTeacher
+
+  fs.writeFile("data.json", JSON.stringify(data, null, 2), (err) => {
+    if (err) return res.send("Delete teacher error!")
+
+    return res.redirect("/teachers")
   })
 }

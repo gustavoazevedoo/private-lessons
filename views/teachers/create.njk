@@ -2,11 +2,16 @@
 
 {% block content %}
   <form class="card" method="POST" action="/teachers">
-    <section class="image"></section>
-
+    <section 
+      class="avatar" 
+      style="background: url(https://source.unsplash.com/collection/41504743/500x500) 
+      no-repeat center center / cover">
+    </section>
+    
     <section class="details">
       <h3>criar professor</h3>
       {% include "teachers/fields.njk"%}
+      <button type="submit">Salvar</button>
     </section>
   </form>
 {% endblock content %}
