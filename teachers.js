@@ -2,6 +2,16 @@ const fs = require("fs")
 const data = require("./data.json")
 const { age, graduation, date } = require("./utils.js")
 
+exports.index = (req, res) => {
+  const teachers = data.teachers
+
+  for (const teacher of teachers) {
+    teacher.classes = teacher.classes.toString().split(",")
+  }
+
+  return res.render("teachers/index", { teachers })
+}
+
 exports.post = (req, res) => {
   const keys = Object.keys(req.body)
   for (key of keys) {
@@ -45,7 +55,7 @@ exports.show = (req, res) => {
     ...foundTeacher,
     age: age(foundTeacher.birth),
     education_level: graduation(foundTeacher.education_level),
-    classes: foundTeacher.classes.split(","),
+    classes: foundTeacher.classes.toString().split(","),
     created_at: Intl.DateTimeFormat("pt-BR").format(foundTeacher.created_at)
   }
 

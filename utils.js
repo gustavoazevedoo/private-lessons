@@ -1,5 +1,3 @@
-const data = require("./data.json")
-
 module.exports = {
   age: (timestamp) => {
     const today = new Date();
