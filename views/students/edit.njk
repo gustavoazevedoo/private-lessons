@@ -8,7 +8,7 @@
   </section>
 
   <section class="details">
-    <form method="POST" action="/students?_method=PUT">
+    <form id="form-post" method="POST" action="/students?_method=PUT">
       <h3>Editar professor</h3>
       {% include "students/fields.njk"%}
       <input type="hidden" name="id" value="{{student.id}}">
@@ -23,5 +23,7 @@
     </form>
   </section>
 </div>
+
+{% include "confirm.njk" %}
  
 {% endblock content %}

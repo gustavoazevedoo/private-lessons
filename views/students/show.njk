@@ -13,32 +13,23 @@
       </div>
 
       <div class="item">
-        <div>Idade</div>
-        <div>{{student.age}}</div>
+        <div>Email</div>
+        <div>{{student.email}}</div>
       </div>
 
       <div class="item">
-        <div>Grau de escolaridade</div>
-        <div>{{student.education_level}}</div>
+        <div>Data de nascimento</div>
+        <div>{{student.birth}}</div>
       </div>
 
       <div class="item">
-        <div>Tipo de aula</div>
-        <div>{{"Presencial" if student.type_class == "presential" else "À distância"}}</div>
+        <div>Ano escolar</div>
+        <div>{{student.grade}}</div>
       </div>
 
       <div class="item">
-        <div>Acompanhamento</div>
-        <div>
-          {% for class in student.classes %}
-            <span>{{class}}</span>
-          {% endfor %}
-        </div>
-      </div>
-
-      <div class="item">
-        <div>Desde</div>
-        <div>{{student.created_at}}</div>
+        <div>Carga horária semanal</div>
+        <div>{{student.hours_week}}</div>
       </div>
 
       <a href="{{student.id}}/edit" class="button">Editar</a>

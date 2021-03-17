@@ -27,6 +27,26 @@ module.exports = {
     const month = `0${birth.getUTCMonth() + 1}`.slice(-2)
     const day = `0${birth.getUTCDate()}`.slice(-2)
 
-    return `${year}-${month}-${day}`
+    return {
+      day,
+      month,
+      year,
+      iso: `${year}-${month}-${day}`,
+      birthDay: `${day}/${month}/${year}`
+    }
+  },
+  grade: (grade) => {
+    switch (grade) {
+      case "fifth-grade": return "5° ano"
+      case "sixth-grade": return "6° ano"
+      case "seventh-grade": return "7° ano"
+      case "eighth-grade": return "8° ano"
+      case "ninth-grade": return "9° ano"
+      case "first-year_high-school": return "1° ano ensino médio"
+      case "second-year_high-school": return "2° ano ensino médio"
+      case "third-year_high-school": return "3° ano ensino médio"
+
+      default: break;
+    }
   }
 }

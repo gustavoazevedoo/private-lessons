@@ -38,30 +38,31 @@
   <div>
     <select name="education_level">
       <option 
-          value="high_school"
-          {% if teacher.education_level == "high_school" %}
-              selected 
-          {% endif %}
+        value="high_school"
+        {% if teacher.education_level == "high_school" %}
+            selected 
+        {% endif %}
       >Ensino médio completo
       </option>
       <option 
-          value="undergraduete" 
-          {% if teacher.education_level == "undergraduete" %}
-              selected 
-          {% endif %}>Ensino superior completo
+        value="undergraduete" 
+        {% if teacher.education_level == "undergraduete" %}
+            selected 
+        {% endif %}
+      >Ensino superior completo
       </option>
       <option 
-          value="master_degree" 
-          {% if teacher.education_level == "master_degree" %}
-              selected 
-          {% endif %}
+        value="master_degree" 
+        {% if teacher.education_level == "master_degree" %}
+            selected 
+        {% endif %}
       >Mestrado
       </option>
       <option 
-          value="doctorate"
-            {% if teacher.education_level == "doctorate" %}
-              selected 
-          {% endif %}
+        value="doctorate"
+          {% if teacher.education_level == "doctorate" %}
+            selected 
+        {% endif %}
       >Doutorado
       </option>
     </select>
