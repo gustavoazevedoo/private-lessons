@@ -4,9 +4,9 @@
       "id": 1,
       "avatar_url": "https://pbs.twimg.com/profile_images/1280271209221853185/4jlsQYK3_400x400.jpg",
       "name": "Batman",
-      "email": "batman@morcego.com",
+      "email": "bruce@batman.com",
       "birth": "1978-04-17",
-      "grade": "ninth-grade",
+      "grade": "eighth-grade",
       "hours_week": "96"
     },
     {
@@ -16,7 +16,16 @@
       "email": "clarkkent@superhomem.com",
       "birth": "1977-04-18",
       "hours_week": "80",
-      "grade": "first-year_high-school"
+      "grade": "sixth-grade"
+    },
+    {
+      "id": 3,
+      "avatar_url": "https://pbs.twimg.com/profile_images/1348712891336290309/Mt3f5a2V_400x400.jpg",
+      "name": "Diana Prince",
+      "email": "diana@wonderwoman.com",
+      "birth": "1985-04-30",
+      "grade": "second-year_high-school",
+      "hours_week": "30"
     }
   ],
   "teachers": [

@@ -1,4 +1,4 @@
-const currentPage = window.location.pathname
+const currentPage = location.pathname
 const menuItems = document.querySelectorAll("header nav a")
 
 for (item of menuItems) {

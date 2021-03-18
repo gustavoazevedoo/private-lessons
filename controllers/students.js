@@ -3,10 +3,9 @@ const data = require("../data.json")
 const { date, grade } = require("../utils.js")
 
 exports.index = (req, res) => {
-
   const students = data.students
 
-  return res.render("students/index", { students }, grade())
+  return res.render("students/index", { students, grade })
 }
 
 exports.create = (req, res) => {
@@ -24,7 +23,13 @@ exports.post = (req, res) => {
   let { avatar_url, name, email, birth, grade, hours_week } = req.body
 
   birth = Date.parse(birth)
-  const id = Number(data.students.length + 1)
+
+  let id = 1
+  const lastStudent = data.students[data.students.length - 1]
+
+  if (lastStudent) {
+    id = lastStudent.id + 1
+  }
 
   data.students.push({
     id,
