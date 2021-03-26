@@ -19,8 +19,8 @@
             <p>{{teacher.name}}</p>
           </td>
           <td>
-            {% for class in teacher.classes %}
-              <span>{{class}}</span>
+            {% for subject_taught in teacher.subjects_taught %}
+              <span>{{subject_taught}}</span>
             {% endfor %}
           </td>
           <td><a href="/teachers/{{teacher.id}}">Ver</a></td>

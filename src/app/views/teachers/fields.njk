@@ -27,8 +27,8 @@
   <div>
     <input 
       type="date" 
-      name="birth" 
-      value="{{teacher.birth}}"
+      name="birth_date" 
+      value="{{teacher.birth_date}}"
     >
   </div>
 </div>
@@ -75,9 +75,9 @@
     <span>
       <input 
         type="radio" 
-        name="type_class" 
+        name="class_type" 
         value="presential" 
-        {% if teacher.type_class == "presential" %}
+        {% if teacher.class_type == "presential" %}
           checked="checked"
         {% endif %}
       >Presencial
@@ -85,9 +85,9 @@
     <span>
       <input 
         type="radio" 
-        name="type_class" 
+        name="class_type" 
         value="remotely" 
-        {% if teacher.type_class == "remotely" %}
+        {% if teacher.class_type == "remotely" %}
           checked="checked"
         {% endif %}
       >À distância
@@ -100,9 +100,9 @@
   <div>
     <input 
       type="text" 
-      name="classes" 
+      name="subjects_taught" 
       placeholder="Separe as matérias ensinadas por virgulas"
-      value="{{teacher.classes}}"
+      value="{{teacher.subjects_taught}}"
     >
   </div>
 </div>
