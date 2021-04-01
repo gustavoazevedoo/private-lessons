@@ -45,6 +45,16 @@ module.exports = {
       callback(results.rows[0])
     })
   },
+  findBy(filter, callback) {
+    db.query(`
+    SELECT * FROM my_teacher 
+    WHERE my_teacher.name ILIKE '%${filter}%'
+    ORDER BY name ASC`, (err, results) => {
+      if (err) throw `Database Error ${err}`
+
+      callback(results.rows)
+    })
+  },
   update(data, callback) {
     const query = `
       UPDATE my_teacher SET

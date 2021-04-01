@@ -258,8 +258,7 @@ table {
   text-align: left;
 }
 
-.table-container tbody td:last-child a,
-.table-container > a {
+.table-container tbody td:last-child a {
   color: var(--background);
   text-transform: uppercase;
   padding: 8px 16px;
@@ -272,5 +271,35 @@ table {
   display: inline-block;
   margin-bottom: 16px;
   font-weight: bold;
+  background-color: var(--comment);
+}
+
+.table-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+.table-header a,
+.table-header form button {
+  font-weight: bold;
+  background-color: var(--green);
+  color: var(--background);
+  text-transform: uppercase;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+.table-header form {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.table-header form button {
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+  width: 30%;
   background-color: var(--comment);
 }
