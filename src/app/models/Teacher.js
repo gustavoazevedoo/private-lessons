@@ -3,7 +3,7 @@ const { date } = require("../../lib/utils")
 
 module.exports = {
   all(callback) {
-    db.query("SELECT * FROM my_teacher", (err, results) => {
+    db.query("SELECT * FROM my_teacher ORDER BY name ASC", (err, results) => {
       if (err) throw `Database Error! ${err}`
 
       callback(results.rows)

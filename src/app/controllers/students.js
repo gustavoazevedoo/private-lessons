@@ -1,4 +1,4 @@
-const { age, grade, date } = require("../../lib/utils")
+const { grade, date } = require("../../lib/utils")
 const Student = require("../models/Student")
 
 module.exports = {
@@ -8,7 +8,9 @@ module.exports = {
     })
   },
   create(req, res) {
-    return res.render("students/create")
+    Student.teachersSelectOptions((options) => {
+      return res.render("students/create", { teachersOptions: options })
+    })
   },
   post(req, res) {
     const keys = Object.keys(req.body)
@@ -33,8 +35,9 @@ module.exports = {
   edit(req, res) {
     Student.find(req.params.id, (student) => {
       student.birth_date = date(student.birth_date).iso
-
-      return res.render(`students/edit`, { student })
+      Student.teachersSelectOptions((options) => {
+        return res.render(`students/edit`, { student, teachersOptions: options })
+      })
     })
   },
   update(req, res) {
