@@ -3,17 +3,33 @@ const Student = require("../models/Student")
 
 module.exports = {
   index(req, res) {
-    const { filter } = req.query
+    let { filter, page, limit } = req.query
 
-    if (filter) {
-      Student.findBy(filter, (students) => {
-        return res.render("students/index", { students, grade, filter })
-      })
-    } else {
-      Student.all((students) => {
-        return res.render("students/index", { students, grade })
-      })
+    page = Number(page) || 1
+    limit = 2
+    let offset = limit * (page - 1)
+
+    const params = {
+      filter,
+      page,
+      limit,
+      offset,
+      callback(students) {
+        if (students[0]) {
+          const pagination = {
+            page,
+            totalPages: Math.ceil(students[0].total / limit)
+          }
+          
+          return res.render("students/index", { students, filter, pagination, grade })
+
+        } else {
+          return res.send("Student not found!")
+        }
+      }
     }
+
+    Student.paginate(params)
   },
   create(req, res) {
     Student.teachersSelectOptions((options) => {

@@ -303,3 +303,30 @@ table {
   width: 30%;
   background-color: var(--comment);
 }
+
+/* Pagination */
+.table-container {
+  display: grid;
+  grid-template: 64px 1fr 64px / 1fr;
+}
+
+.table-container .table-header {
+  margin: 0;
+  align-self: start;
+}
+
+.table-container .pagination {
+  align-self: end;
+  justify-self: center;
+}
+
+.pagination a,
+.pagination span {
+  color: var(--pink);
+  margin-right: 16px;
+}
+
+.pagination a:hover {
+  filter: brightness(0.8);
+  border-bottom: 1px solid var(--pink);
+}

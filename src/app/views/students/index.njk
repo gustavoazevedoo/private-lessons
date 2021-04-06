@@ -5,7 +5,7 @@
     <div class="table-header">
       <a href="/students/create">Novo +</a>
       <form action="/students" method="GET">
-        <input type="text" name="filter" value="{{filter}}" placeholder="Filtrar por nome">
+        <input type="text" name="filter" value="{{filter}}" placeholder="Nome ou email">
         <button type="submit">Filtrar</button>
       </form>
     </div>
@@ -32,5 +32,14 @@
         {% endfor %}
       </tbody>
     </table>
+    <div 
+      class="pagination"
+      data-page={{pagination.page}}
+      data-total={{pagination.totalPages}}
+      data-filter={{filter}}
+    >
+    </div>
   </div>
+
+  <script src="/pagination.js"></script>
 {% endblock content %}
